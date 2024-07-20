@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vModel"
+            type="com.example.chatapp.viewmodel.MyViewModel" />
+    </data>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/download"
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Messages"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="#942B9C"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerView"
+                android:layout_above="@+id/layout_input">
+                
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/layout_input"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Type Here"
+                    android:id="@+id/edittext_chat_message"
+                    android:layout_marginLeft="5dp"/>
+
+                <Button
+                    android:id="@+id/sendBTN"
+                    android:layout_width="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/regular_button"
+                    android:layout_height="match_parent"
+                    android:text="Send"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+        
+        
+    </LinearLayout>
+
+
+</layout>
